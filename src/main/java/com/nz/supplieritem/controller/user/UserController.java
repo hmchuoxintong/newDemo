@@ -4,6 +4,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -70,6 +72,20 @@ public class UserController {
         map.put("id",userId);
         map.put("name",userName);
         return map;
+    }
+
+    /**
+     * 获取当前的用户信息
+     * @return
+     */
+    @GetMapping("/me")
+    public Object getMe(){
+        return SecurityContextHolder.getContext().getAuthentication();
+    }
+
+    @GetMapping("/getme")
+    public Object getMe2(Authentication authentication){
+        return authentication;
     }
 
 }

@@ -52,13 +52,13 @@ public class MyGenerator {
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
-        DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/solr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT");
-        // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("111111");
-        mpg.setDataSource(dsc);
+//        DataSourceConfig dsc = new DataSourceConfig();
+//        dsc.setUrl("jdbc:mysql://localhost:3306/solr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT");
+//        // dsc.setSchemaName("public");
+//        dsc.setDriverName("com.mysql.jdbc.Driver");
+//        dsc.setUsername("root");
+//        dsc.setPassword("111111");
+//        mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();

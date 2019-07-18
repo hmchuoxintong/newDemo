@@ -6,4 +6,6 @@ import lombok.Data;
 public class BrowserProperties {
 
     private String loginPage = "/signIn";
+
+    private int rememberMeSeconds = 3600*24*7;
 }
